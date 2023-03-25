@@ -52,7 +52,7 @@
                         />
                     </StackPanel>
                 </Button>
-                <Button Classes="navigationbuttons">
+                <Button Classes="navigationbuttons" Click="Button_OnClick">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock 
                             HorizontalAlignment="Center" 

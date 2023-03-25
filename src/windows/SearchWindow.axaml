@@ -1,0 +1,45 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:customControls="clr-namespace:AniLib.custom_controls"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AniLib.windows.SearchWindow"
+        Background="#24292e"
+        Title="SearchWindow">
+    
+    <Window.Styles>
+        <StyleInclude Source="/src/styles/ButtonStyles.axaml" />
+    </Window.Styles>
+    
+    <Grid RowDefinitions="Auto,*,*">
+        <customControls:NavigationBar Grid.Row="0" />
+        
+        <Grid Grid.Row="1" Background="transparent" Grid.ColumnDefinitions="*,4*">
+            <!-- searchBar and filter (TODO: implement filters) -->
+            <Grid Grid.Column="0" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" Margin="10,5,10,0">
+                    <!-- todo: textbox styling, so it looks like its one element (might need to read docs for watermark) -->
+                    <TextBox 
+                        x:Name="searchBar"
+                        Watermark="Search for anime"
+                        Width="200"
+                        Height="30"
+                        Margin="0,0,10,0"
+                        ></TextBox>
+                    <Button Classes="navigationbuttons" Click="Button_OnClick">
+                        <Button.Content>
+                            <Image 
+                                Source="/src/assets/icons/search.png"
+                                Width="20"></Image>
+                        </Button.Content>
+                    </Button>
+                    <Label x:Name="testLabel">test</Label>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="0"></Grid>
+        </Grid>
+        
+        <customControls:FooterBar Grid.Row="2"></customControls:FooterBar>
+    </Grid>
+</Window>
