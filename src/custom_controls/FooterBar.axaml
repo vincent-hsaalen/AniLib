@@ -1,0 +1,21 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="281"
+             x:Class="AniLib.custom_controls.FooterBar">
+    
+    <UserControl.Styles>
+        <StyleInclude Source="/src/styles/ButtonStyles.axaml" />
+    </UserControl.Styles>
+    <Grid ColumnDefinitions="*">
+    <Button Classes="navigationbuttons" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Button_OnClick">
+            <Button.Content>
+                <Grid>
+                    <Ellipse Width="30" Height="30" Fill="Transparent" />
+                    <Image Source="/src/assets/icons/github.png" Width="28" Height="28" Margin="5" />
+                </Grid>
+            </Button.Content>
+        </Button>
+    </Grid>
+</UserControl>

@@ -2,8 +2,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:customControls="clr-namespace:AniLib.custom_controls"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="281"
+        Width="720" Height="480"
+        Background="#24292e"
         x:Class="AniLib.MainWindow"
         Title="AniLib">
-    Welcome to Avalonia!
+    
+    <!-- Main Grid containing all the content (Navigation Bar, Login, Register, Help, Footer, etc.) -->
+    <Grid RowDefinitions="*,*,*">
+        <customControls:NavigationBar Grid.Row="0" />
+        
+        <customControls:FooterBar Grid.Row="2"></customControls:FooterBar>
+    </Grid>
 </Window>

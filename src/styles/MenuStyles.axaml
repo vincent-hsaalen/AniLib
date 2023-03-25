@@ -1,0 +1,31 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <Menu>
+                <MenuItem Header="Menu">
+                    <MenuItem Header="1" />
+                    <MenuItem Header="2" />
+                    <Separator />
+                    <MenuItem Header="3" />
+                </MenuItem>
+            </Menu>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- normal menu style -->
+    <Style Selector="Menu">
+        <Setter Property="Background" Value="transparent"></Setter>
+    </Style>
+    <!-- menu hover style -->
+    <Style Selector="MenuItem:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="transparent"></Setter>
+    </Style>
+    <Style Selector="MenuItem /template/ ContentPresenter">
+        <Setter Property="Background" Value="transparent"></Setter>
+    </Style>
+    <Style Selector="Menu:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="transparent"></Setter>
+        
+    </Style>
+</Styles>
