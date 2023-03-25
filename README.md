@@ -1,10 +1,8 @@
 ﻿# AniLib
 
 AniLib is an open source anime library and tracker with a focus on simplicity and ease of use.
-AniLib uses the [Jikan.NET](https://github.com/Ervie/jikan.net) to fetch and retrieve data from [MyAnimeList](https://myanimelist.net/).
-The UI is built using [Avalonia](https://avaloniaui.net/) a cross platform UI framework (because all the other ones suck :P).
-
-
+AniLib uses [Jikan.NET](https://github.com/Ervie/jikan.net) to fetch and retrieve data from [MyAnimeList](https://myanimelist.net/).
+The UI is built using [Avalonia](https://avaloniaui.net/), a cross platform UI framework (because all the other ones suck :P).
 
 ## Menu
 
