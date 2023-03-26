@@ -2,7 +2,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="281"
+             Background="#24292e"
              x:Class="AniLib.custom_controls.AnimeCard">
-    Welcome to Avalonia!
+    
+    <!-- TODO: Grid -->
+    
+    <Grid RowDefinitions="Auto">
+        <StackPanel Grid.Column="0" Margin="10" Orientation="Horizontal">
+            <Image 
+                Source="/src/assets/icons/info_round.png"
+                Width="50"
+                >
+            </Image>
+            <StackPanel Margin="10">
+                <TextBlock Text="Title" Foreground="White" FontSize="16"></TextBlock>
+                <TextBlock Text="Description" Foreground="White" FontSize="10"></TextBlock>
+            </StackPanel>
+            <!-- Add buttons for bookmarking, watching, etc. -->
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Background="#24292e" BorderBrush="#24292e" BorderThickness="0" Margin="10">
+                    <Image Source="/src/assets/icons/bookmark.png" Width="20"></Image>
+                </Button>
+                <Button Background="#24292e" BorderBrush="#24292e" BorderThickness="0" Margin="10">
+                    <Image Source="/src/assets/icons/bookmark.png" Width="20"></Image>
+                </Button>
+                <Button Background="#24292e" BorderBrush="#24292e" BorderThickness="0" Margin="10">
+                    <Image Source="/src/assets/icons/bookmark.png" Width="20"></Image>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </UserControl>

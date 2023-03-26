@@ -15,15 +15,15 @@
     <Grid RowDefinitions="Auto,*,*">
         <customControls:NavigationBar Grid.Row="0" />
         
-        <Grid Grid.Row="1" Background="transparent" Grid.ColumnDefinitions="*,4*">
+        <Grid Grid.Row="1" Background="transparent" Grid.ColumnDefinitions="*,3*">
             <!-- searchBar and filter (TODO: implement filters) -->
-            <Grid Grid.Column="0" VerticalAlignment="Top">
-                <StackPanel Orientation="Horizontal" Margin="10,5,10,0">
+            <Grid Grid.Column="0" VerticalAlignment="Top" Margin="10">
+                <StackPanel Orientation="Horizontal">
                     <!-- todo: textbox styling, so it looks like its one element (might need to read docs for watermark) -->
                     <TextBox 
                         x:Name="searchBar"
                         Watermark="Search for anime"
-                        Width="200"
+                        Width="150"
                         Height="30"
                         Margin="0,0,10,0"
                         ></TextBox>
@@ -34,10 +34,14 @@
                                 Width="20"></Image>
                         </Button.Content>
                     </Button>
-                    <Label x:Name="testLabel">test</Label>
                 </StackPanel>
             </Grid>
-            <Grid Grid.Column="0"></Grid>
+            
+            <!-- search results -->
+            <Grid Grid.Column="1"  Margin="10">
+                <ListBox x:Name="resultsListBox">
+                </ListBox>
+            </Grid>
         </Grid>
         
         <customControls:FooterBar Grid.Row="2"></customControls:FooterBar>

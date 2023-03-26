@@ -11,14 +11,31 @@ public partial class NavigationBar : UserControl{
     public NavigationBar(){
         InitializeComponent();
     }
-
+    
     private void InitializeComponent(){
         AvaloniaXamlLoader.Load(this);
     }
 
-    private void Button_OnClick(object? sender, RoutedEventArgs e){
+    private void HomeButton_OnClick(object? sender, RoutedEventArgs e){
+        MainWindow mw = new();
         MainWindow mainWindow = (MainWindow) ((IClassicDesktopStyleApplicationLifetime) Application.Current.ApplicationLifetime).MainWindow;
-        SearchWindow searchWindow = new SearchWindow();
+        // check if the current window is the MainWindow and if it is, do nothing
+        if (mainWindow.Content == mw.Content){
+        }
+        else {
+            mainWindow.Content = mw.Content;
+        }
+    }
+
+    private void SearchButton_OnClick(object? sender, RoutedEventArgs e){
+        MainWindow mainWindow = (MainWindow) ((IClassicDesktopStyleApplicationLifetime) Application.Current.ApplicationLifetime).MainWindow;
+        SearchWindow searchWindow = new();
         mainWindow.Content = searchWindow.Content;
+    }
+
+    private void LibraryButton_OnClick(object? sender, RoutedEventArgs e){
+        MainWindow mainWindow = (MainWindow) ((IClassicDesktopStyleApplicationLifetime) Application.Current.ApplicationLifetime).MainWindow;
+        LibraryWindow libraryWindow = new();
+        mainWindow.Content = libraryWindow.Content;
     }
 }

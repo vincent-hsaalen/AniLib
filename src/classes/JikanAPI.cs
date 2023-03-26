@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using JikanDotNet;
-using MongoDB;
 
 namespace AniLib.classes;
 
@@ -27,7 +26,15 @@ public class JikanAPI{
         return animeList;
     }
     
-    
-    
-
+    // print all anime titles
+    public async Task<List<string>> GetAnimeTitles(string query){
+        var animes = await SearchAnime(query);
+        List<string> titles = new List<string>();
+        foreach(Anime anime in animes){
+            foreach(TitleEntry title in anime.Titles){
+                titles.Add(title.Title);
+            }
+        }
+        return titles;
+    }
 }

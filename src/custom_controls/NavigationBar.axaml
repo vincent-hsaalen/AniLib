@@ -39,7 +39,7 @@
         <!-- Content 2-->
         <Grid x:Name="navigationButtons" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
-                <Button Classes="navigationbuttons">
+                <Button x:Name="homeButton" Classes="navigationbuttons" Click="HomeButton_OnClick">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock 
                             HorizontalAlignment="Center" 
@@ -52,7 +52,7 @@
                         />
                     </StackPanel>
                 </Button>
-                <Button Classes="navigationbuttons" Click="Button_OnClick">
+                <Button x:Name="searchButton" Classes="navigationbuttons" Click="SearchButton_OnClick">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock 
                             HorizontalAlignment="Center" 
@@ -65,7 +65,7 @@
                         />
                     </StackPanel>
                 </Button>
-                <Button Classes="navigationbuttons">
+                <Button x:Name="libraryButton" Classes="navigationbuttons" Click="LibraryButton_OnClick">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock 
                             HorizontalAlignment="Center" 
