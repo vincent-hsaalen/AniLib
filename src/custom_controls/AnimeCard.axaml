@@ -10,13 +10,14 @@
     
     <Grid RowDefinitions="Auto">
         <StackPanel Grid.Column="0" Margin="10" Orientation="Horizontal">
-            <Image 
+            <Image
+                x:Name="coverImage"
                 Source="/src/assets/icons/info_round.png"
                 Width="50"
                 >
             </Image>
             <StackPanel Margin="10">
-                <TextBlock Text="Title" Foreground="White" FontSize="16"></TextBlock>
+                <TextBlock x:Name="titleLabel" Text="{Binding}" Foreground="White" FontSize="16"/>
                 <TextBlock Text="Description" Foreground="White" FontSize="10"></TextBlock>
             </StackPanel>
             <!-- Add buttons for bookmarking, watching, etc. -->

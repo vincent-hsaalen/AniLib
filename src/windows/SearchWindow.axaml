@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:customControls="clr-namespace:AniLib.custom_controls"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="281"
         x:Class="AniLib.windows.SearchWindow"
         Background="#24292e"
         Title="SearchWindow">
@@ -18,7 +18,7 @@
         <Grid Grid.Row="1" Background="transparent" Grid.ColumnDefinitions="*,3*">
             <!-- searchBar and filter (TODO: implement filters) -->
             <Grid Grid.Column="0" VerticalAlignment="Top" Margin="10">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
                     <!-- todo: textbox styling, so it looks like its one element (might need to read docs for watermark) -->
                     <TextBox 
                         x:Name="searchBar"
@@ -27,20 +27,21 @@
                         Height="30"
                         Margin="0,0,10,0"
                         ></TextBox>
-                    <Button Classes="navigationbuttons" Click="Button_OnClick">
+                    <Button Classes="navigationbuttons" x:Name="searchButton" Click="SearchButton_OnClick">
                         <Button.Content>
                             <Image 
                                 Source="/src/assets/icons/search.png"
                                 Width="20"></Image>
                         </Button.Content>
                     </Button>
+                    <customControls:AnimeCard x:Name="anicard"></customControls:AnimeCard>
+
                 </StackPanel>
             </Grid>
             
             <!-- search results -->
             <Grid Grid.Column="1"  Margin="10">
-                <ListBox x:Name="resultsListBox">
-                </ListBox>
+                <ListBox x:Name="resultsListBox"></ListBox>
             </Grid>
         </Grid>
         
